@@ -19,8 +19,8 @@ header {
 
 nav {
     border-bottom: 1px solid #cc1;
-    width: 80%;
-    color: rgb(229, 229, 229);
+    width: 50%;
+    /* color: rgb(229, 229, 229); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,12 +29,16 @@ nav {
     height: 50px;
     border-radius: 30%;
     font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+    /* text-align: center; */
     padding: 15px;
+    transition: ease 0.5s all;
 }
+  
 nav:hover {
+    width: 80%;
     background-color: rgba(204, 204, 17, 0.158);
+}
+nav::after {
     transition: ease 0.3s all;
 }
 
@@ -55,7 +59,13 @@ nav:hover {
     /* background-color: rgba(255, 255, 255, 0.202);  */
     transition: ease 0.3s all;
 }
-
+button {
+    background: none;
+    padding: 0px;
+    border-width: 0px;
+    color: white;
+    font: inherit;
+}
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -111,3 +121,19 @@ footer .logo {
     width: 20px;
 
 }
+
+#wa-widget-send-button {
+    animation: bouncing 0.8s cubic-bezier(.1,.25,.1,1) 0.6s infinite alternate both;
+}
+@keyframes bouncing{
+    0%  { 
+      bottom: 0; 
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.717);
+    }
+    
+    100%{ 
+      bottom: 30px; 
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.389);
+    }
+  }
+  
